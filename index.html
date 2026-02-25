@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script tpype="module" src="./script.js"></script>
+        <link rel="stylesheet" type = "text/css" href="style.css"/>
+    </head>
+    <body style="background-image:url(./image.png); background-repeat: no-repeat;background-size:cover;">
+        <h1>OS</h1>
+        <h2>Introduction</h2>
+        <p>An OS built for the WebOS sidequest on flavortown</p>
+        <div id="welcome" style="border: solid; height:700px; width:1800px; border-radius: 16px; position:absolute; padding: 16px; top: 50%; left: 50%; transform: translate(-50%, -36%);">
+            <p id="welcomeheader" class="welcomeheader">Drag Window</p>
+            <p id="welcomeclose" class="closebutton"></p>
+
+            
+        </div>
+        <div id="window" class="window">
+            <p style="margin-left: 16px;font-weight: 700;">
+                WebOS
+            </p>
+            <p id="welcomeopen" class="openbutton"></p>
+            <p style="margin-right: 16px; font-weight:700;" id="timeElement">
+                2/24/2026 1:17 PM
+            </p>
+        </div>
+        <script>
+            setInterval(function() {
+                document.querySelector("#timeElement").innerHTML = new Date().toLocaleString();
+            }, 500);
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>
