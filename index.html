@@ -1,33 +1,85 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script tpype="module" src="./script.js"></script>
-        <link rel="stylesheet" type = "text/css" href="style.css"/>
-    </head>
-    <body style="background-image:url(./image.png); background-repeat: no-repeat;background-size:cover;">
-        <h1>OS</h1>
-        <h2>Introduction</h2>
-        <p>An OS built for the WebOS sidequest on flavortown</p>
-        <div id="welcome" style="border: solid; height:700px; width:1800px; border-radius: 16px; position:absolute; padding: 16px; top: 50%; left: 50%; transform: translate(-50%, -36%);">
-            <p id="welcomeheader" class="welcomeheader">Drag Window</p>
-            <p id="welcomeclose" class="closebutton"></p>
 
-            
-        </div>
-        <div id="window" class="window">
-            <p style="margin-left: 16px;font-weight: 700;">
-                WebOS
-            </p>
-            <p id="welcomeopen" class="openbutton"></p>
-            <p style="margin-right: 16px; font-weight:700;" id="timeElement">
-                2/24/2026 1:17 PM
-            </p>
-        </div>
-        <script>
-            setInterval(function() {
-                document.querySelector("#timeElement").innerHTML = new Date().toLocaleString();
-            }, 500);
-        </script>
-        <script src="script.js"></script>
-    </body>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body
+  style="font-family: Noto Sans, system-ui, sans-serif; height: 100vh; background-image: url(./image.png); background-size: cover; background-repeat: no-repeat; margin: 0px;">
+  <div class="window" id="welcome" style="top: calc(50% - 90px); left: calc(50% - 180px);">
+    <div class="windowheader" id="welcomeheader">
+      <div class="closebutton" id="welcomeclose"></div>
+
+      <p class="headertext">Welcome</p>
+      <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
+    </div>
+    <div style="background-color: #fff; margin: 6px; border-radius: 12px; width: 360px; padding: 16px;">
+      <img src="pfp.png"
+        style="width: 64px; height: 64px; border-radius: 32px; object-fit: cover;" />
+      <h1 style="margin: 4px;">tomato OS</h1>
+      <p style="margin: 0px;">
+        <dfn>tomato window</dfn><abbr title="Operating System"></abbr> <br />
+        <code>give me candy</code>
+      </p>
+    </div>
+  </div>
+
+  <div id="top"
+    style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(10px); background-color: rgba(0, 0, 0, 0.125); color: #fff; justify-content: space-between; gap: 32px;">
+    <p id="welcomeopen"
+      style="margin-left: 16px; font-weight: 700; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px; cursor: pointer;">
+      tomato
+    </p>
+    <p style="margin-left: 16px; background-color: rgba(256, 256, 256, 0.25); padding: 4px 12px; border-radius: 16px;">
+        i hate coding until it works
+    </p>
+    <p id="timeElement"
+      style="margin-right: 16px; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;">
+
+    </p>
+  </div>
+
+  <div id="desktopApps" style="padding-top: 64px; padding-left: 16px;">
+    <div id="photoIcon"
+      style="text-align: center; margin: 8px; padding: 8px; filter: drop-shadow(0 0 8px black); width: fit-content; cursor: pointer;">
+      <img src="./photo.png" style="width: 64px; height: 64px; border-radius: 16px;">
+      <p style="margin: 0px; color: #fff; ">Message</p>
+    </div>
+  </div>
+
+  <div class="window" id="notes" style="top: calc(50% - 240px); display: none; left: calc(50% - 260px); ">
+    <div class="windowheader" id="notesheader">
+      <div class="closebutton" id="notesclose">
+      </div>
+
+      <p class="headertext">hi</p>
+      <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
+    </div>
+    <div
+      style="background-color: #fff; margin: 6px; border-radius: 12px; width: 520px; height: 480px; padding: 16px; font-family: Courier; display: flex;">
+      <div id="sidebar"
+        style="background-color: #F9F9F9; width: 520px; margin-right: 16px; padding: 16px; border-radius: 16px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="window" id="photo" style="top: calc(50% - 90px); left: calc(50% - 180px); display: none; ">
+    <div class="windowheader" id="photoheader">
+      <div class="closebutton" id="photoclose">
+      </div>
+
+      <p class="headertext">Message</p>
+      <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
+    </div>
+    <div style="background-color: #fff; margin: 6px; border-radius: 12px; width: 360px; padding: 16px;">
+      <p>
+        This is my first time using HTML in a while, so I hope it seems good!
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
